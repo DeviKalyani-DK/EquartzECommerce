@@ -50,12 +50,19 @@ public class LoginFunctionality extends BaseClass{
 	*/
 	
 	//dataprovider & excel
-	public void doLogin(String username,String pass) {
+	public void loginUsername(String username) {
 		email.sendKeys(username);
-		password.sendKeys(pass);
-		signin.click();
+		
 	}
 	
+	public void loginPassword(String pass) {
+		password.sendKeys(pass);
+		
+	}
+	
+	public void loginSignin() {
+		signin.click();
+	}
 	public void forgotPass() {
 			forgotPassword.click();
 	}

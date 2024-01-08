@@ -1,11 +1,13 @@
 package utils;
 
 import java.awt.AWTException;
+
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -16,7 +18,7 @@ import org.openqa.selenium.WebElement;
 public class Utils {
 	
  
-	public static String filepath="C:\\Users\\admin\\Documents\\loginExample.xlsx";
+	public static String filepath=".\\src\\main\\java\\testdata\\EquartzTestData.xlsx";
     public static Robot rb;
 	
 	public static String[][] setData(String sheetName) throws Throwable{
@@ -78,6 +80,7 @@ public class Utils {
 		
 		return false;
 	}
+
 
 
 }

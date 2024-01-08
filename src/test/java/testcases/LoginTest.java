@@ -31,7 +31,9 @@ public class LoginTest extends BaseClass{
 	
 	@Test(dataProvider="testData")
 	public void verifyLoginValidCredentials(String uname,String pwd) {	
-		login.doLogin(uname, pwd);
+		login.loginUsername(uname);
+		login.loginPassword(pwd);
+		login.loginSignin();
 		String url=driver.getCurrentUrl();
 		Assert.assertEquals("https://e-quarz.com/", url);
 		
@@ -39,7 +41,9 @@ public class LoginTest extends BaseClass{
 	
 	@Test(dataProvider="testData")
 	public void verifyLoginInvalid(String uname,String pwd) {
-		login.doLogin(uname, pwd);
+		login.loginUsername(uname);
+		login.loginPassword(pwd);
+		login.loginSignin();
 		String errMsg=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
 		Assert.assertEquals("Credentials do not match or account has been suspended.", errMsg,"Invalid UserName");
 	}
@@ -47,14 +51,17 @@ public class LoginTest extends BaseClass{
 	
 	@Test(dataProvider="testData")
 	public void verifyLoginInvalidPassword(String uname,String pwd) {
-		login.doLogin(uname, pwd);
+		login.loginUsername(uname);
+		login.loginPassword(pwd);
+		login.loginSignin();
 		String errMsg=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
 		Assert.assertEquals("Credentials do not match or account has been suspended.", errMsg,"Invalid Password");
 	}
 
 	@Test(dataProvider="testData")
 	public void verifyLoginEmptyUserName(String uname,String pwd) {
-		login.doLogin(uname, pwd);
+		login.loginUsername(uname);
+		login.loginSignin();
 		String isUserNameRequired=login.email.getAttribute("required");
 		if(uname.equals("")) {
 			Assert.assertEquals(false,isUserNameRequired, "Empty UserName");
@@ -63,7 +70,8 @@ public class LoginTest extends BaseClass{
 	
 	@Test(dataProvider="testData")
 	public void verifyLoginEmptyPassword(String uname,String pwd) {
-		login.doLogin(uname, pwd);
+		login.loginPassword(pwd);
+		login.loginSignin();
 		String isPasswordRequired=login.password.getAttribute("required");
 		if(pwd.equals("")){
 			Assert.assertEquals(false,isPasswordRequired, "Empty Password");
@@ -73,7 +81,7 @@ public class LoginTest extends BaseClass{
 	
 	@Test
 	public void verifyLoginEmptyCredentials() {
-		login.signin.click();
+		login.loginSignin();
 		Assert.fail("Both credentials are empty");
 	}
 	
