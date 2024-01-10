@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 08 18:40:59 IST 2024</td>
+<td>Started on:</td><td>Wed Jan 10 16:21:37 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1197 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11236 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.LoginTest.verifyLoginEmptyUserName()'><b>verifyLoginEmptyUserName</b><br>Test class: testcases.LoginTest</td>
-<td><div><pre>org.testng.internal.reflect.MethodMatcherException: 
-[public void testcases.LoginTest.verifyLoginEmptyUserName(java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: verifyLoginEmptyUserName([java.lang.String arg0])
-Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:918)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+<td title='testcases.RegistrationTest.matchPasswordConfirmPassword()'><b>matchPasswordConfirmPassword</b><br>Test class: testcases.RegistrationTest<br>Parameters: devi, kalyani, kalyaniviswanadhula@gmail.com, 7780599805, 12546789, 12567589</td>
+<td><div><pre>java.lang.AssertionError: The password and con password must match.
+	at org.testng.Assert.fail(Assert.java:111)
+	at testcases.RegistrationTest.matchPasswordConfirmPassword(RegistrationTest.java:211)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -105,15 +108,18 @@ Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace7548983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace7548983'><pre>org.testng.internal.reflect.MethodMatcherException: 
-[public void testcases.LoginTest.verifyLoginEmptyUserName(java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: verifyLoginEmptyUserName([java.lang.String arg0])
-Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:918)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+</pre></div><a href='#' onClick='toggleBox("stack-trace752230403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace752230403'><pre>java.lang.AssertionError: The password and con password must match.
+	at org.testng.Assert.fail(Assert.java:111)
+	at testcases.RegistrationTest.matchPasswordConfirmPassword(RegistrationTest.java:211)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -135,8 +141,8 @@ Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
-<td>testcases.LoginTest@644baf4a</td></tr>
+<td>2</td>
+<td>testcases.RegistrationTest@350aac89</td></tr>
 </table><p>
 </body>
 </html>

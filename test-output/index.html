@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse--1872335431\testng-customsuite.xml</span>
+                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse-102168893\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testcases.LoginTest" class="method navigator-link" hash-for-method="verifyLoginEmptyUserName">verifyLoginEmptyUserName</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testcases.RegistrationTest" class="method navigator-link" hash-for-method="matchPasswordConfirmPassword(devi, kalyani, kalyaniviswanadhula@gmail.com, 7780599805, 12546789, 12567589)">matchPasswordConfirmPassword(devi, kalyani, kalyaniviswanadhula@gmail.com, 7780599805, 12546789, 12567589)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,22 +121,26 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testcases.LoginTest</span>
+              <span class="class-name">testcases.RegistrationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginEmptyUserName">
-                  </a> <!-- verifyLoginEmptyUserName -->
-                  <span class="method-name">verifyLoginEmptyUserName</span>
-                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
-[public void testcases.LoginTest.verifyLoginEmptyUserName(java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: verifyLoginEmptyUserName([java.lang.String arg0])
-Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
-	at org.testng.internal.Parameters.injectParameters(Parameters.java:918)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+                  <a name="matchPasswordConfirmPassword(devi, kalyani, kalyaniviswanadhula@gmail.com, 7780599805, 12546789, 12567589)">
+                  </a> <!-- matchPasswordConfirmPassword(devi, kalyani, kalyaniviswanadhula@gmail.com, 7780599805, 12546789, 12567589) -->
+                  <span class="method-name">matchPasswordConfirmPassword</span>
+                  <span class="parameters">(devi,kalyani,kalyaniviswanadhula@gmail.com,7780599805,12546789,12567589)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The password and con password must match.
+	at org.testng.Assert.fail(Assert.java:111)
+	at testcases.RegistrationTest.matchPasswordConfirmPassword(RegistrationTest.java:211)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -166,7 +170,7 @@ Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse--1872335431\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse-102168893\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -175,11 +179,11 @@ Arguments: [(java.lang.String) ,(java.lang.String) jungkook97]
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.LoginTest&quot;&gt;
+      &lt;class name=&quot;testcases.RegistrationTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyLoginEmptyUserName&quot;/&gt;
+          &lt;include name=&quot;matchPasswordConfirmPassword&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testcases.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- testcases.RegistrationTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -221,14 +225,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLoginEmptyUserName')
-data.setCell(0, 2, 'testcases.LoginTest')
-data.setCell(0, 3, 1138);
+data.setCell(0, 1, 'matchPasswordConfirmPassword')
+data.setCell(0, 2, 'testcases.RegistrationTest')
+data.setCell(0, 3, 2205);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,29 +247,33 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">11 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testcases.LoginTest</span>
+              <span class="ignored-class-name">testcases.RegistrationTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyLoginEmptyPassword</span>
+                <span class="ignored-method-name">duplicatePhoneNum</span>
                 <br/>
-                <span class="ignored-method-name">verifyLoginInvalid</span>
+                <span class="ignored-method-name">invalidPasswordLength</span>
                 <br/>
-                <span class="ignored-method-name">forgotPasswordEnable</span>
+                <span class="ignored-method-name">emptyEmail</span>
                 <br/>
-                <span class="ignored-method-name">verifyLoginEmptyCredentials</span>
+                <span class="ignored-method-name">emptyFirstName</span>
                 <br/>
-                <span class="ignored-method-name">verifyLoginInvalidPassword</span>
+                <span class="ignored-method-name">duplicateEmailID</span>
                 <br/>
-                <span class="ignored-method-name">verifySignUp</span>
+                <span class="ignored-method-name">regElementsAvailable</span>
                 <br/>
-                <span class="ignored-method-name">verifyForgotPassword</span>
+                <span class="ignored-method-name">emptyPassword</span>
                 <br/>
-                <span class="ignored-method-name">verifyRememberme</span>
+                <span class="ignored-method-name">emptyPhoneNum</span>
                 <br/>
-                <span class="ignored-method-name">verifyLoginValidCredentials</span>
+                <span class="ignored-method-name">validRegistratinCredentials</span>
+                <br/>
+                <span class="ignored-method-name">emptyLastName</span>
+                <br/>
+                <span class="ignored-method-name">emptyConfirmPassword</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -276,6 +284,18 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.RegistrationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">matchPasswordConfirmPassword(devi, kalyani, kalyaniviswanadhula@gmail.com, 7780599805, 12546789, 12567589)</span>
+                <span class="method-start">9006 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

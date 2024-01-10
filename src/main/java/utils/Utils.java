@@ -1,24 +1,24 @@
 package utils;
 
-import java.awt.AWTException;
-
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.List;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import base.BaseClass;
 
-public class Utils {
+
+public class Utils extends BaseClass{
 	
  
-	public static String filepath=".\\src\\main\\java\\testdata\\EquartzTestData.xlsx";
+	public static String filepath="C:\\Users\\admin\\Documents\\EquartzTestData.xlsx";
     public static Robot rb;
 	
 	public static String[][] setData(String sheetName) throws Throwable{
@@ -58,17 +58,16 @@ public class Utils {
 		rb.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
+	public static boolean isElementDisplay(WebElement w) {
+		return w.isDisplayed();
+	}
+	
 	public static boolean isElementEnable(WebElement w) {
-		
-			boolean element_enable=w.isEnabled();
-			return element_enable;
-
-		
+			return w.isEnabled();
 	}
 	
 	public static boolean isElementSelected(WebElement w) {
-		boolean element_select=w.isSelected();
-		return element_select;
+		return w.isSelected();
 	}
 	
 	public static boolean containsString(String s1,String s2) {
@@ -81,6 +80,8 @@ public class Utils {
 		return false;
 	}
 
-
+	public  String getToastMessageText(WebDriver driver) {
+		return driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
+	}
 
 }

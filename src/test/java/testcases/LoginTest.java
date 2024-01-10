@@ -19,6 +19,9 @@ public class LoginTest extends BaseClass{
 	public void setUp() {
 		browserInitialization();
 		login=new LoginFunctionality(driver);
+		login.icon.click();
+		login.signin_icon.click();
+		
 	}
 	
 	String sheetName="loginFunctionality";
@@ -44,8 +47,8 @@ public class LoginTest extends BaseClass{
 		login.loginUsername(uname);
 		login.loginPassword(pwd);
 		login.loginSignin();
-		String errMsg=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
-		Assert.assertEquals("Credentials do not match or account has been suspended.", errMsg,"Invalid UserName");
+		String errMsg=login.toastMessageText();
+		Assert.fail(errMsg);
 	}
 	
 	
@@ -55,7 +58,7 @@ public class LoginTest extends BaseClass{
 		login.loginPassword(pwd);
 		login.loginSignin();
 		String errMsg=driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
-		Assert.assertEquals("Credentials do not match or account has been suspended.", errMsg,"Invalid Password");
+		Assert.fail(errMsg);
 	}
 
 	@Test(dataProvider="testData")
@@ -85,27 +88,26 @@ public class LoginTest extends BaseClass{
 		Assert.fail("Both credentials are empty");
 	}
 	
-//	@Test(dataProvider="testData")
-//	public void verifyTabButton(String uname,String pwd) throws Throwable {
-//		login.email.sendKeys(uname);
-//		Utils.keysRobot();
-//		login.password.sendKeys(pwd);
-//		login.signin.click();
-//		
-//	}
-//	
-//	@Test(dataProvider="testData")
-//	public void verifyEnterButton(String uname,String pwd) throws Throwable {
-//		login.email.sendKeys(uname);
-//		login.password.sendKeys(pwd);
-//		Utils.enterRobot();
-//		
-//	}
-//	
+	@Test(dataProvider="testData")
+	public void verifyTabButton(String uname,String pwd) throws Throwable {
+		login.email.sendKeys(uname);
+		Utils.keysRobot();
+		login.password.sendKeys(pwd);
+		login.signin.click();
+		
+	}
+	
+	@Test(dataProvider="testData")
+	public void verifyEnterButton(String uname,String pwd) throws Throwable {
+		login.email.sendKeys(uname);
+		login.password.sendKeys(pwd);
+		Utils.enterRobot();
+		
+	}
+	
 	@Test
 	public void forgotPasswordEnable() {
-		boolean forgotPassPresence=login.forgotPassword.isEnabled();
-		Assert.assertEquals(true, forgotPassPresence);
+		Assert.assertTrue(login.forgotPassword.isEnabled(), "password is not enabled");
 		
 	}
 	
@@ -118,12 +120,6 @@ public class LoginTest extends BaseClass{
 	}
 	
 	
-//	@Test
-//	public void rememberMeEnable() {
-//		Assert.assertEquals(true, Utils.isElementEnable(login.rememberMe) );
-//	}
-	
-	
 	@Test
 	public void verifyRememberme() {
 		login.remember_me();	
@@ -132,18 +128,24 @@ public class LoginTest extends BaseClass{
 	}
 	
 	@Test
+	public void signupEnabled() {
+		Assert.assertTrue(Utils.isElementEnable(login.signupbutton));
+	}
+	
+	
+	@Test
 	public void verifySignUp() {
 		login.signup_button();
 		String url=driver.getCurrentUrl();
 		Assert.assertEquals("https://e-quarz.com/customer/auth/sign-up", url);
 	}
 	
-//	@Test
-//	public void verifyShowPassword() {
-//		login.show_password();
-//		String attribute=login.password.getAttribute("type");
-//		Assert.assertEquals("text", attribute);
-//	}
+	@Test
+	public void verifyShowPassword() {
+		login.show_password();
+		String attribute=login.password.getAttribute("type");
+		Assert.assertEquals("text", attribute);
+	}
 	
 	
 	@AfterMethod

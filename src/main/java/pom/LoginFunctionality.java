@@ -2,16 +2,21 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeMethod;
 
-import base.BaseClass;
 
-public class LoginFunctionality extends BaseClass{
+public class LoginFunctionality {
 	
 	//pom -> design pattern for framework
+	
+	@FindBy(xpath="//a[@type='button']")
+	public WebElement icon;
+	
+	@FindBy(xpath="//i[@class='fa fa-sign-in mr-2']")
+	public WebElement signin_icon;
 	
 	@FindBy(id="si-email")
      public WebElement email;
@@ -34,6 +39,8 @@ public class LoginFunctionality extends BaseClass{
 	@FindBy(xpath="//i[@class='czi-eye password-toggle-indicator']")
 	public WebElement showPassword;
 	
+	@FindBy(xpath="//div[@class='toast-message']")
+	public WebElement toastMessage;
 
 	//pagefactory initialization 
 	public LoginFunctionality(WebDriver driver) {
@@ -80,4 +87,7 @@ public class LoginFunctionality extends BaseClass{
 		showPassword.click();
 	}
 
+	public String toastMessageText() {
+		return toastMessage.getText();
+	}
 }
