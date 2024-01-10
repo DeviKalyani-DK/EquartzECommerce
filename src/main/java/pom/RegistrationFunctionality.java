@@ -1,5 +1,7 @@
 package pom;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,6 +49,9 @@ public class RegistrationFunctionality{
 	@FindBy(xpath="//img[@class='__inline-11']")
 	public WebElement companyIcon;
 	
+	@FindBy(xpath="//i[@class='czi-eye password-toggle-indicator']")
+	public List<WebElement> show_password;
+	
 	public RegistrationFunctionality(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -84,7 +89,19 @@ public class RegistrationFunctionality{
 		signupButton.click();
 	}
 	
+	public void regSignInButton() {
+		signinButton.click();
+	}
+	
 	public String toastMessageText() {
 		return toastMessage.getText();
+	}
+	
+	public void showPassword() {
+		show_password.get(0).click();
+	}
+	
+	public void showConfirmPassword() {
+		show_password.get(1).click();
 	}
 }

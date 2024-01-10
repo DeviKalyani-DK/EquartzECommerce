@@ -208,5 +208,35 @@ public class RegistrationTest extends BaseClass {
 		Assert.fail(errMsg);
 	}
 	
+	@Test
+	public void verifyShowPassword() {
+		register.showPassword();
+		String attribute=register.password.getAttribute("type");
+		Assert.assertEquals("text", attribute,"Show Password is not working");
+	}
 
+	@Test
+	public void verifyShowConPassword() {
+		register.showConfirmPassword();
+		String attribute=register.confirmPassword.getAttribute("type");
+		Assert.assertEquals("text", attribute,"Show Password is not working");
+	}
+	
+	@Test
+	public void signupButtonEnable() {
+		Assert.assertEquals(false,Utils.isElementEnable(register.signupButton), "signup button is enabled");
+	}
+	
+	@Test
+	public void signinButtonEnable() {
+		Assert.assertTrue(Utils.isElementEnable(register.signinButton), "Sign in Button is not enable");
+	}
+	
+	@Test
+	public void verifySigninButton() {
+		register.regSignInButton();
+		String url=driver.getCurrentUrl();
+		Assert.assertEquals("https://e-quarz.com/customer/auth/login", url);
+	}
+	
 }

@@ -144,7 +144,7 @@ public class LoginTest extends BaseClass{
 	public void verifyShowPassword() {
 		login.show_password();
 		String attribute=login.password.getAttribute("type");
-		Assert.assertEquals("text", attribute);
+		Assert.assertEquals("text", attribute,"Show Password is not working");
 	}
 	
 	
