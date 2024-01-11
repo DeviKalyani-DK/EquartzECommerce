@@ -3,12 +3,23 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testcases.SearchTest">
+	  <class name="testcases.RegistrationTest">
+	    <methods>
+	    	<include name="validRegistratinCredentials"/>
+	    </methods>
+	  </class>
+      <class name="testcases.LoginTest">
       	<methods>
-     		<include name="verifySearchAutoSuggestions"/>
+     		<include name="verifyLoginValidCredentials"/>
      	
       	</methods>
       </class>
+      <class name="testcases.SearchTest">
+      	<methods>
+      		<include name="verifySearch"/>
+      	</methods>
+      </class>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

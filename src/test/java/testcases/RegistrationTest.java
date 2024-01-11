@@ -2,7 +2,7 @@ package testcases;
 
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -15,7 +15,7 @@ public class RegistrationTest extends BaseClass {
 	RegistrationFunctionality register;
 	Utils ut=new Utils();
 
-	@BeforeTest
+	@BeforeMethod
 	public void setUp() {
 		browserInitialization();
 		register=new RegistrationFunctionality(driver);
@@ -193,6 +193,8 @@ public class RegistrationTest extends BaseClass {
 		Assert.fail(errMsg);
 		
 	}
+	
+	
 	
 	@Test(dataProvider="testData")
 	public void mismatchPasswordConPassword(String fname,String lname,String email,String phone,String pass,String conpass) {

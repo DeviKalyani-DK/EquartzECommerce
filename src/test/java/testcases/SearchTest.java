@@ -37,16 +37,19 @@ public class SearchTest extends BaseClass{
 	public void verifySearch(String product) throws Throwable {
 		search.doSearch(product);
 		Utils.enterRobot();
-		List<WebElement> iphones=driver.findElements(By.xpath("//div[@class='text-left pl-3']/a"));
+		List<WebElement> products=driver.findElements(By.xpath("//div[@class='text-left pl-3']/a"));
 		
-		for(WebElement e:iphones) {
+		for(WebElement p:products) {
 		
-			if(e.getText().toLowerCase().contains(product.toLowerCase())) {
+			p.click();
+			WebElement product_name=driver.findElement(By.xpath("//span[@class='mb-2 __inline-24']"));
+			if(product_name.getText().toLowerCase().contains(product.toLowerCase())) {
+				driver.navigate().back();
 				continue;
 			}
 			else {
-				System.out.println(e.getText());
-				Assert.fail("Not all products are not related to iphone");
+				System.out.println(product_name.getText());
+				Assert.fail("Not all products are not related to "+product);
 			}
 		}
 		
