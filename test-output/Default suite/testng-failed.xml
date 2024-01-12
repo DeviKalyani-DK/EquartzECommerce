@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pom.BuyNowFunctionality_WishList">
+      <class name="testcases.BuyNow_WishList_Test">
         <methods>
-          <include name="buyNow"/>
+          <include name="verifyclickIconHeart"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- pom.BuyNowFunctionality_WishList -->
+      </class> <!-- testcases.BuyNow_WishList_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

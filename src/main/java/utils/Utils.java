@@ -4,6 +4,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -13,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import base.BaseClass;
+import pom.BuyNowFunctionality_WishList;
 
 
 public class Utils extends BaseClass{
@@ -20,7 +22,7 @@ public class Utils extends BaseClass{
  
 	public static String filepath="C:\\Users\\admin\\Documents\\EquartzTestData.xlsx";
     public static Robot rb;
-	
+	public static BuyNowFunctionality_WishList buynow;
 	public static String[][] setData(String sheetName) throws Throwable{
 		
 		File file=new File(filepath);
@@ -82,6 +84,20 @@ public class Utils extends BaseClass{
 
 	public  String getToastMessageText(WebDriver driver) {
 		return driver.findElement(By.xpath("//div[@class='toast-message']")).getText();
+	}
+	
+	public static void cancelWishListProducts(WebElement product) {
+		
+		buynow.clickIconHeart();
+		List<WebElement> productsCancel=buynow.wishlistProductsCancel();
+		for(WebElement p:productsCancel) {
+			
+			if(product.getText().equals(p.getText())) {
+				p.click();
+				break;
+			}
+		}
+		
 	}
 
 }

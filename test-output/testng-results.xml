@@ -2,50 +2,29 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-11T00:17:19 IST" name="Default suite" finished-at="2024-01-11T00:17:56 IST" duration-ms="36026">
+  <suite started-at="2024-01-12T13:51:15 IST" name="Default suite" finished-at="2024-01-12T13:51:23 IST" duration-ms="8299">
     <groups>
     </groups>
-    <test started-at="2024-01-11T00:17:19 IST" name="Default test" finished-at="2024-01-11T00:17:56 IST" duration-ms="36026">
-      <class name="pom.BuyNowFunctionality_WishList">
-        <test-method signature="buyNow()[pri:0, instance:pom.BuyNowFunctionality_WishList@2e3967ea]" started-at="2024-01-11T00:17:20 IST" name="buyNow" finished-at="2024-01-11T00:17:55 IST" duration-ms="35924" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+    <test started-at="2024-01-12T13:51:15 IST" name="Default test" finished-at="2024-01-12T13:51:23 IST" duration-ms="8299">
+      <class name="testcases.BuyNow_WishList_Test">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.BuyNow_WishList_Test@4b45a2f5]" started-at="2024-01-12T13:51:15 IST" name="setUp" finished-at="2024-01-12T13:51:22 IST" duration-ms="7213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyclickIconHeart()[pri:0, instance:testcases.BuyNow_WishList_Test@4b45a2f5]" started-at="2024-01-12T13:51:22 IST" name="verifyclickIconHeart" finished-at="2024-01-12T13:51:23 IST" duration-ms="1020" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=120.0.6099.200)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-SKFP6VU', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2aede18c220f81159a84d7e8019b1adb
-*** Element info: {Using=xpath, value=//h5[@class='font-black __text-20px']}]]>
+              <![CDATA[expected [https://e-quarz.com/customer/auth/login] but found [https://e-quarz.com/wishlists]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=120.0.6099.200)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-SKFP6VU', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2aede18c220f81159a84d7e8019b1adb
-*** Element info: {Using=xpath, value=//h5[@class='font-black __text-20px']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at pom.BuyNowFunctionality_WishList.buyNow(BuyNowFunctionality_WishList.java:55)
+              <![CDATA[java.lang.AssertionError: expected [https://e-quarz.com/customer/auth/login] but found [https://e-quarz.com/wishlists]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testcases.BuyNow_WishList_Test.verifyclickIconHeart(BuyNow_WishList_Test.java:51)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,11 +55,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buyNow -->
-      </class> <!-- pom.BuyNowFunctionality_WishList -->
+        </test-method> <!-- verifyclickIconHeart -->
+      </class> <!-- testcases.BuyNow_WishList_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
