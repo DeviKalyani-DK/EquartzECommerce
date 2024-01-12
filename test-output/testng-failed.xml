@@ -5,7 +5,7 @@
     <classes>
       <class name="testcases.BuyNow_WishList_Test">
         <methods>
-          <include name="verifyclickIconHeart"/>
+          <include name="validaddToWishList"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- testcases.BuyNow_WishList_Test -->

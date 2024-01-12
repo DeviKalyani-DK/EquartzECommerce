@@ -33,6 +33,9 @@ public class BuyNowFunctionality_WishList extends BaseClass{
 		
 		@FindBy(xpath="//a[text()[normalize-space() = 'Garden Tree']]")
 		public WebElement product;
+		
+		@FindBy(id="swal2-content")
+		public WebElement CartMessage;
 	
 		public BuyNowFunctionality_WishList(WebDriver driver) {
 			
@@ -70,7 +73,9 @@ public class BuyNowFunctionality_WishList extends BaseClass{
 			buyNow.click();
 		}
 		    
-		
+		public String cartMsg() {
+			return CartMessage.getText();
+		}
 		
 //		Select s=new Select(driver.findElement(By.xpath("//select[@class='form-control']")));
 //		s.selectByValue("7");

@@ -18,11 +18,17 @@ public class BuyNow_WishList_Test extends BaseClass{
 	LoginFunctionality login;
 	boolean flag=false;
 	
-	@BeforeMethod
+	@BeforeMethod()
+	
 	public void setUp() {
 		browserInitialization();
 		buynow=new BuyNowFunctionality_WishList(driver);
 		login=new LoginFunctionality(driver);
+		login.icon.click();
+		login.signin_icon.click();
+		login.loginUsername("devikalyaniviswanadhula2000@gmail.com");
+		login.loginPassword("jungkook97");
+		login.loginSignin();
 		
 	}
 	
@@ -59,11 +65,6 @@ public class BuyNow_WishList_Test extends BaseClass{
 		buynow.productOnClick();
 		buynow.addProductWishList();
 		buynow.wishListOK();
-		login.icon.click();
-		login.signin_icon.click();
-		login.loginUsername("devikalyaniviswanadhula2000@gmail.com");
-		login.loginPassword("jungkook97");
-		login.loginSignin();
 		buynow.addProductWishList();
 		buynow.clickIconHeart();
 		List<WebElement> products=buynow.wishlistProductsNames();
@@ -92,6 +93,13 @@ public class BuyNow_WishList_Test extends BaseClass{
 			}
 		}
 		
+	}
+	
+	@Test
+	public void verifyCart() {
+		buynow.buyNowProduct();
+		String url=buynow.cartMsg();
+		Assert.assertEquals("Already added!",url);
 	}
 	
 	
